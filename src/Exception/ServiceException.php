@@ -13,7 +13,7 @@ final class ServiceException extends RuntimeException
         return new self(
             sprintf(
                 'Unable to find a usable %sservice inside your WSDL.',
-                $preferredSoapVersion?->humanReadable() ?? ''
+                $preferredSoapVersion ? $preferredSoapVersion->humanReadable() . ' ' : ''
             )
         );
     }
